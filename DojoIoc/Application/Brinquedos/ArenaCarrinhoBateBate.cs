@@ -1,6 +1,6 @@
 ﻿namespace Application.Brinquedos;
 
-class ArenaCarrinhoBateBate : IBrinquedoOnline
+public class ArenaCarrinhoBateBate : IBrinquedoOnline
 {
     public bool Ligado { get; set; }
     

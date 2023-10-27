@@ -1,6 +1,6 @@
 ﻿namespace Application.Monitoramento;
 
-interface IEquipamentoEntradaNoParque
+public interface IEquipamentoEntradaNoParque
 {
     void RegistrarEntrada();
     void RegistrarSaida();
