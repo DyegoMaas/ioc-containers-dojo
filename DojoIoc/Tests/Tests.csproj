@@ -21,4 +21,9 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ConsoleApp\ConsoleApp.csproj" />
+      <ProjectReference Include="..\WebApplication\WebApplication.csproj" />
+    </ItemGroup>
+
 </Project>
