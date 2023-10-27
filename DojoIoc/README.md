@@ -10,3 +10,5 @@
 
 
 ### 3.1. Criando escopos
+
+
