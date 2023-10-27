@@ -1,6 +1,6 @@
 ﻿namespace Application.Brinquedos;
 
-class MontanhaRussa : IBrinquedoOnline
+public class MontanhaRussa : IBrinquedoOnline
 {
     public bool Ligado { get; set; }
     

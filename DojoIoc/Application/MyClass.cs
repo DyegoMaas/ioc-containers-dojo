@@ -1,19 +1,20 @@
 ﻿using Application.Brinquedos;
 using Application.Monitoramento;
+using System.Collections;
 
 namespace Application;
 
 public class SistemaParque
 {
     private readonly IRegistroPresenca _registroPresenca;
-    private readonly List<IBrinquedoOnline> _briquedos;
-    private readonly List<Catraca> _catracas;
+    private readonly IEnumerable<IBrinquedoOnline> _briquedos;
+    public readonly IEnumerable<IEquipamentoEntradaNoParque> Catracas;
 
-    public SistemaParque(IRegistroPresenca registroPresenca, List<IBrinquedoOnline> briquedos, List<Catraca> catracas)
+    public SistemaParque(IRegistroPresenca registroPresenca, IEnumerable<IBrinquedoOnline> briquedos, IEnumerable<IEquipamentoEntradaNoParque> catracas)
     {
         _registroPresenca = registroPresenca;
         _briquedos = briquedos;
-        _catracas = catracas;
+        Catracas = catracas;
     }
 
     public void InicializarParque()
@@ -25,10 +26,10 @@ public class SistemaParque
 
         _registroPresenca.Zerar();
         
-        foreach (var catraca in _catracas)
-        {
-            catraca.Zerar();
-        }
+        //foreach (var catraca in _catracas)
+        //{
+        //    catraca.Zerar();
+        //}
     }
     
     public void DesligarParque()
