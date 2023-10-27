@@ -15,12 +15,15 @@ builder.Services.AddTransient<IEquipamentoEntradaNoParque>(serviceProvider => ne
 
 var app = builder.Build();
 
-var sistemao = app.Services.GetService<SistemaParque>();
-var catracas = sistemao.Catracas.ToList();
+var sistemao = app.Services.GetRequiredService<SistemaParque>();
+sistemao.InicializarParque();
 
+var catracas = sistemao.EquipamentosControleEntrada.ToList();
 catracas[0].RegistrarEntrada();
 catracas[2].RegistrarSaida();
 catracas[1].RegistrarEntrada();
+
+Console.WriteLine(sistemao.GerarDiagnostico());
 
 app.MapGet("/", () => "Hello World!");
 

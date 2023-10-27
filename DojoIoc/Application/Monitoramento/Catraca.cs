@@ -3,7 +3,7 @@
 public class Catraca : IEquipamentoEntradaNoParque
 {
     private readonly IRegistroPresenca _registroPresenca;
-    private int Entradas = 0;
+    public int Entradas { get; private set; }
 
     public Catraca(string id, IRegistroPresenca registroPresenca)
     {
@@ -28,5 +28,10 @@ public class Catraca : IEquipamentoEntradaNoParque
     public void Zerar()
     {
         Entradas = 0;
+    }
+    
+    public override string ToString()
+    {
+        return $"Catraca {Id}";
     }
 }

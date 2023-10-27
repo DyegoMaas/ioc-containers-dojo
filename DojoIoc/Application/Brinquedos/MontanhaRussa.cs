@@ -2,7 +2,7 @@
 
 public class MontanhaRussa : IBrinquedoOnline
 {
-    public bool Ligado { get; set; }
+    public bool Ligado { get; private set; }
     
     public void Ligar()
     {
@@ -12,5 +12,10 @@ public class MontanhaRussa : IBrinquedoOnline
     public void Desligar()
     {
         Ligado = false;
+    }
+    
+    public override string ToString()
+    {
+        return nameof(MontanhaRussa);
     }
 }

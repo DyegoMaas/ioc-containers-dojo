@@ -13,4 +13,9 @@ public class ArenaCarrinhoBateBate : IBrinquedoOnline
     {
         Ligado = false;
     }
+
+    public override string ToString()
+    {
+        return nameof(ArenaCarrinhoBateBate);
+    }
 }
